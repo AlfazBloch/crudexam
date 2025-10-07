@@ -1,7 +1,7 @@
 import express from "express";
 import productRouter from './routes/product.route.js'
 // import connectDB from "./config/db.js";
-import db from "./config/db.js";
+// import db from "./config/db.js";
 import http from "http"
 import { Server } from "socket.io";
 import setUpSocket from "./socket.js";
@@ -22,8 +22,8 @@ app.get('/', (req, res) => {
 
 app.use('/api/products',productRouter)
 
-await db.authenticate()
-await db.sync()
+// await db.authenticate()
+// await db.sync()
 
 
 setUpSocket(io)
